@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+        <div class="row" style="display:flex; flex-wrap: wrap;">
+
+          <% posts.forEach(function(post){ %>
+            <div class="col-md-3 col-sm-6">
+              <div class="thumbnail">
+
+                <a href="/posts/<%=post._id%>"><img src="<%= post.image %>"></a>
+
+                <div class="caption">
+                  <h4><a href="/posts/<%=post._id%>"> <%=post.name %> </a>
+                  </h4>
+                </div>      
+              </div>
+            </div>
+            <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% include ../partials/footer %>
